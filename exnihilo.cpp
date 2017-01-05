@@ -3,8 +3,9 @@
 //
 
 #include <QDebug>
+#include "receive.h"
 
 int main() {
-    qDebug() << "Testing.";
+    receive* receiver = new receive();
     return 0;
 }

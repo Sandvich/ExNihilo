@@ -4,11 +4,11 @@ project(ExNihilo)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-        exnihilo.cpp)
+        exnihilo.cpp receive.cpp receive.h)
 
 find_package(Qt5Core REQUIRED)
-#find_package(Qt5Components REQUIRED)
+find_package(Qt5Network REQUIRED)
 
 add_executable(ExNihilo ${SOURCE_FILES})
 set(CMAKE_AUTOMOC TRUE)
-target_link_libraries(ExNihilo Qt5::Core)
+target_link_libraries(ExNihilo Qt5::Core Qt5::Network)
